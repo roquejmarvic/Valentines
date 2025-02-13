@@ -1,0 +1,14 @@
+{
+  "builds": [
+    {
+      "src": "Pages/Index.cshtml",
+      "use": "@vercel/static"
+    }
+  ],
+  "routes": [
+    {
+      "src": "/",
+      "dest": "/Pages/Index.cshtml"
+    }
+  ]
+}
