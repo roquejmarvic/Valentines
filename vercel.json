@@ -1,14 +1,14 @@
 {
   "builds": [
     {
-      "src": "Pages/Index.cshtml",
+      "src": "publish/wwwroot/index.html",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/",
-      "dest": "/Pages/Index.cshtml"
+      "src": "/(.*)",
+      "dest": "/publish/wwwroot/index.html"
     }
   ]
 }
