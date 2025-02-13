@@ -1,14 +1,34 @@
 {
   "builds": [
     {
-      "src": "publish/wwwroot/**",
+      "src": "publish/wwwroot/index.html",
       "use": "@vercel/static"
     }
   ],
   "routes": [
     {
-      "src": "/(.*)",
+      "src": "/",
       "dest": "/publish/wwwroot/index.html"
+    },
+    {
+      "src": "/css/(.*)",
+      "dest": "/publish/wwwroot/css/$1"
+    },
+    {
+      "src": "/js/(.*)",
+      "dest": "/publish/wwwroot/js/$1"
+    },
+    {
+      "src": "/images/(.*)",
+      "dest": "/publish/wwwroot/images/$1"
+    },
+    {
+      "src": "/video/(.*)",
+      "dest": "/publish/wwwroot/$1"
+    },
+    {
+      "src": "/lib/(.*)",
+      "dest": "/publish/wwwroot/lib/$1"
     }
   ]
 }
